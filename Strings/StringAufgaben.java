@@ -1,6 +1,5 @@
 /**
- * @author (die bellenden Libellen) 
- * @version (eine Versionsnummer oder ein Datum)
+ * Klasse in welcher Unterschiedliche Methoden auf einen String angewandt werden
  */
 
 public class StringAufgaben
