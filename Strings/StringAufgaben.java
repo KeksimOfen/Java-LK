@@ -1,9 +1,11 @@
 /**
- * Klasse in welcher Unterschiedliche Methoden auf einen String angewandt werden
+ * @author (Luca & Johannes) 
+ * @version (eine Versionsnummer oder ein Datum)
  */
-
 public class StringAufgaben
 {
+
+
     public String stringUmkehren(String pEingabe)
     {
         String ausgabe = "";
@@ -20,6 +22,7 @@ public class StringAufgaben
         }
     }
 
+
     public String stringGlaetten(String pEingabe)
     {
         String ausgabe = "";
@@ -35,11 +38,9 @@ public class StringAufgaben
 
     public boolean istPalindrom(String pEingabe)
     {
-        if(stringUmkehren(pEingabe).equals(pEingabe))
-        {
-            return true;
-        }
-        return false;
+        String ausgabe = stringGlaetten(pEingabe);
+        ausgabe = verwandelInGrossbuchstaben(ausgabe);
+        return stringUmkehren(ausgabe).equals(ausgabe);
     }
 
     public String verwandelInGrossbuchstaben(String pEingabe)
@@ -47,7 +48,7 @@ public class StringAufgaben
         String ausgabe = "";
         for(int i=0; i < pEingabe.length(); i++)
         {
-            if(!Character.isLetter(pEingabe.charAt(i)))
+            if((int) pEingabe.charAt(i) < 97 || (int) pEingabe.charAt(i) > 122)
             {
                 ausgabe += pEingabe.charAt(i);
             }
@@ -87,4 +88,4 @@ public class StringAufgaben
         ausgabe[stelle] = pEingabe.substring(anfang);
         return ausgabe;
     }
-}   
+}
